@@ -123,7 +123,7 @@ namespace LogicBuilder.Attributes.Tests
         {
             [ErrorMessage(TestConstants.ErrorMessageText)]
 #pragma warning disable CS0649 // Field is never assigned to, and will always have its default value
-            public string MyField = string.Empty;
+            public readonly string MyField = string.Empty;
 #pragma warning restore CS0649 // Field is never assigned to, and will always have its default value
 
             [ErrorMessage(TestConstants.ErrorMessageText)]
