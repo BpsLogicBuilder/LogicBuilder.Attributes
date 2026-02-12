@@ -28,5 +28,18 @@ namespace LogicBuilder.Attributes.Tests
 
             Assert.Equal(TestConstants.SummaryText, attribute.Summary);
         }
+
+        private class SampleClass
+        {
+            [Summary(TestConstants.SummaryText)]
+            public SampleClass()
+            {
+            }
+
+            [Summary(TestConstants.SummaryText)]
+            public void MyMethod()
+            {
+            }
+        }
     }
 }

@@ -40,5 +40,26 @@ namespace LogicBuilder.Attributes.Tests
 
             Assert.Equal(TestConstants.My_Property, attribute.AlsoKnownAs);
         }
+
+        private class SampleClass
+        {
+            [AlsoKnownAs(TestConstants.SampleClass_1)]
+            public SampleClass
+            (
+                int myProperty
+            )
+            {
+                MyProperty = myProperty;
+            }
+
+            [AlsoKnownAs(TestConstants.My_Property)]
+            public int MyProperty { get; set; }
+
+
+            [AlsoKnownAs(TestConstants.My_Method)]
+            public void MyMethod()
+            {
+            }
+        }
     }
 }
