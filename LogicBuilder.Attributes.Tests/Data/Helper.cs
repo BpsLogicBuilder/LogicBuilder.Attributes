@@ -12,5 +12,12 @@ namespace LogicBuilder.Attributes.Tests.Data
                 .GetCustomAttributes(true)
                 .Single(attribute => attribute.GetType().FullName == attributeName);
         }
+
+        internal static Attribute GetAttribute(ParameterInfo parameterInfo, string attributeName)
+        {
+            return (Attribute)parameterInfo
+                .GetCustomAttributes(true)
+                .Single(attribute => attribute.GetType().FullName == attributeName);
+        }
     }
 }
