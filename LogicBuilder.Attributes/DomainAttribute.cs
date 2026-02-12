@@ -2,17 +2,13 @@
 
 namespace LogicBuilder.Attributes
 {
+    /// <summary>
+    /// Domain Attribute
+    /// </summary>
+    /// <param name="domainList">Comma delimited list of items</param>
     [AttributeUsage(AttributeTargets.Field | AttributeTargets.Property | AttributeTargets.Parameter, AllowMultiple = false)]
-    public class DomainAttribute : Attribute
+    public class DomainAttribute(string domainList) : Attribute
     {
-        public string DomainList { get; private set; }
-        /// <summary>
-        /// Domain Attribute
-        /// </summary>
-        /// <param name="domainList">Comma delimited list of items</param>
-        public DomainAttribute(string domainList)
-        {
-            this.DomainList = domainList;
-        }
+        public string DomainList { get; } = domainList;
     }
 }

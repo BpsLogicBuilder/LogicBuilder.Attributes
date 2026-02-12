@@ -164,7 +164,9 @@ namespace LogicBuilder.Attributes.Tests
         private class SampleClass
         {
             [VariableEditorControl(VariableControlType.TypeAutoComplete)]
+#pragma warning disable CS0649 // Field is never assigned to, and will always have its default value 0
             public int MyField;
+#pragma warning restore CS0649
 
             [VariableEditorControl(VariableControlType.DomainAutoComplete)]
             public string MyProperty { get; set; } = string.Empty;

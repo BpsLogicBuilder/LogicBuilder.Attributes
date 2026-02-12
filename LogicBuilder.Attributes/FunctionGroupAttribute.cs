@@ -2,17 +2,13 @@
 
 namespace LogicBuilder.Attributes
 {
+    /// <summary>
+    /// BPS Logic Builder function category.
+    /// </summary>
+    /// <param name="functionGroup"></param>
     [AttributeUsage(AttributeTargets.Method, AllowMultiple = false)]
-    public class FunctionGroupAttribute : Attribute
+    public class FunctionGroupAttribute(FunctionGroup functionGroup) : Attribute
     {
-        public FunctionGroup FunctionGroup { get; private set; }
-        /// <summary>
-        /// BPS Logic Builder function category.
-        /// </summary>
-        /// <param name="functionGroup"></param>
-        public FunctionGroupAttribute(FunctionGroup functionGroup)
-        {
-            this.FunctionGroup = functionGroup;
-        }
+        public FunctionGroup FunctionGroup { get; } = functionGroup;
     }
 }

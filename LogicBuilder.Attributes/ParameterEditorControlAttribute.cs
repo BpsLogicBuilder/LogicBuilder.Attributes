@@ -2,17 +2,13 @@
 
 namespace LogicBuilder.Attributes
 {
+    /// <summary>
+    /// Control to be used in BPS Logic Builder for the parameter.
+    /// </summary>
+    /// <param name="controlType"></param>
     [AttributeUsage(AttributeTargets.Parameter, AllowMultiple = false)]
-    public class ParameterEditorControlAttribute : Attribute
+    public class ParameterEditorControlAttribute(ParameterControlType controlType) : Attribute
     {
-        public ParameterControlType ControlType { get; private set; }
-        /// <summary>
-        /// Control to be used in BPS Logic Builder for the parameter.
-        /// </summary>
-        /// <param name="controlType"></param>
-        public ParameterEditorControlAttribute(ParameterControlType controlType)
-        {
-            this.ControlType = controlType;
-        }
+        public ParameterControlType ControlType { get; } = controlType;
     }
 }
