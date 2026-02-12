@@ -22,7 +22,7 @@ namespace LogicBuilder.Attributes.Tests
         {
             AlsoKnownAsAttribute attribute = (AlsoKnownAsAttribute)Helper.GetAttribute
             (
-                typeof(SampleClass).GetMethod(TestConstants.MethodName),
+                typeof(SampleClass).GetMethod(TestConstants.MethodName)!,
                 AttributeConstants.ALSOKNOWNASATTRIBUTE
             );
 
@@ -34,7 +34,7 @@ namespace LogicBuilder.Attributes.Tests
         {
             AlsoKnownAsAttribute attribute = (AlsoKnownAsAttribute)Helper.GetAttribute
             (
-                typeof(SampleClass).GetProperty(TestConstants.PropertyName), 
+                typeof(SampleClass).GetProperty(TestConstants.PropertyName)!,
                 AttributeConstants.ALSOKNOWNASATTRIBUTE
             );
 

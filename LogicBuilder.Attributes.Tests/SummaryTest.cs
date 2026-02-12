@@ -22,7 +22,7 @@ namespace LogicBuilder.Attributes.Tests
         {
             SummaryAttribute attribute = (SummaryAttribute)Helper.GetAttribute
             (
-                typeof(SampleClass).GetMethod(TestConstants.MethodName),
+                typeof(SampleClass).GetMethod(TestConstants.MethodName)!,
                 AttributeConstants.SUMMARYATTRIBUTE
             );
 
