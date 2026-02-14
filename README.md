@@ -1,5 +1,8 @@
 # LogicBuilder.Attributes
 
+[![Build Status](https://github.com/BpsLogicBuilder/LogicBuilder.Attributes/actions/workflows/ci.yml/badge.svg)](https://github.com/BpsLogicBuilder/LogicBuilder.Attributes/actions/workflows/ci.yml)
+[![CodeQL](https://github.com/BpsLogicBuilder/LogicBuilder.Attributes/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/BpsLogicBuilder/LogicBuilder.Attributes/actions/workflows/github-code-scanning/codeql)
+[![codecov](https://codecov.io/github/BpsLogicBuilder/LogicBuilder.Attributes/graph/badge.svg?token=6SYONOKTZ4)](https://codecov.io/github/BpsLogicBuilder/LogicBuilder.Attributes)
 [![NuGet](https://img.shields.io/nuget/v/LogicBuilder.Attributes.svg)](https://www.nuget.org/packages/LogicBuilder.Attributes)
 
 LogicBuilder.Attributes is a .NET Standard 2.0 library that provides declarative attributes for automatic configuration of methods, fields, properties, and constructor parameters in [LogicBuilder](https://github.com/BpsLogicBuilder/LogicBuilder) applications.
